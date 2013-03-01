@@ -1,1 +1,11 @@
 x2x
+
+<?php print '<pre>';
+  	 $k=array();
+		 $komis_t = Komis_t::model()->findAll();
+		 foreach($komis_t as $komis){
+		 print_r($komis->attributes);
+		 $k= array_merge($k,$komis->attributes);
+		  }
+		 print '<hr>';
+		 print_r($k);
